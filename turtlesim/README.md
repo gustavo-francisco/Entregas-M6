@@ -12,21 +12,9 @@ Já no outro: <br>
 `python3 main.py`<br>
 Espera-se obter a simulação como resultado.
 ## Entendimento do código
-O objetivo do projeto é fazer com que o rastro da movimentação da tartaruga forme um quadrado. <br>
-A função principal do código é a que faz a movimentação da tartaruga, sendo ela: <br>
-    `def move_turtle(self):`<br>
-Ela comporta blocos iguais que permitem a movimentação da tartaruga, sendo eles: <br>
-        `self.twist_msg_.linear.x = 2.0
-        self.twist_msg_.angular.z = 0.0
-        self.publisher_.publish(self.twist_msg_)
-        time.sleep(2.0)` <br>
-Este bloco é responsável pela regulação da velocidade linear. Quando a velocidade linear possui um valor, a tartaruga se movimenta de forma retílinea. Nesse caso, como está positivo no eixo x, ela se movimentará inicialmente para a direita. <br>
-E o outro bloco: <br> 
-`    self.twist_msg_.linear.x = 0.0
-        self.twist_msg_.angular.z = 1.57
-        self.publisher_.publish(self.twist_msg_)
-        time.sleep(2.0)`
-Este bloco é responsável pela regulação da velocidade angular da tartaruga, ou seja, faz com que ela mude o ângulo que está andando. Para atingir o objetivo do projeto, é necessário que ela se movimente em 90º 3 vezes. Para isso, transforma-se o ângulo de 90 graus em radianos, para que possa ser utilizado como valor no código. Para encontrarmos o valor de 90º em radianos, multiplica-se esse número por pi e divide-se o resultado por 180, obtendo, assim, 1.57 (valor utilizado no código).<br>
-Para a tartaruga formar o quadrado, é necessário repetir o movimento linear 4 vezes e o angular 3 vezes, de maneira intercalada. Após isso, para impedir com que a tartaruga se movimente, utilizamos o comando da biblioteca time: <br>
+Para esse projeto, utilizamos os conceitos de node, tópico e publisher. <br>
+No código é criado primeiramente um node Turtle Controller, e criamos um objeto publisher que publica mensagens twist (que fazem a movimentação linear e angular) no tópico 'turtle1/cmd_vel'.
+O objetivo do projeto é fazer com que o rastro da movimentação da tartaruga forme um triângulo de cabeça pra baixo dentro de um triângulo maior. <br>
+Para conseguir implementar, é necessário dividir o código em 2 partes, de movimentação e rotação do ângulo. A movimentação escolhida foi de valor 2.0 no linear. Já os ângulos foram escolhidos para conseguir modelar o formato desejado. Basta transformar o valor dos graus em radianos. Após isso, para impedir com que a tartaruga se movimente, utilizamos o comando da biblioteca time: <br>
 `self.timer_.cancel()` <br>
 Já era! agora é só diversão.
