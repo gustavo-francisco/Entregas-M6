@@ -19,19 +19,19 @@ class TurtleController(Node):
 
 
         self.twist_msg_.linear.x = 0.0
-        self.twist_msg_.angular.z = 1.57
+        self.twist_msg_.angular.z = 2.09
         self.publisher_.publish(self.twist_msg_)
         time.sleep(2.0)
             
         self.twist_msg_.linear.x = 2.0
         self.twist_msg_.angular.z = 0.0
         self.publisher_.publish(self.twist_msg_)
-        time.sleep(3.0)
+        time.sleep(2.0)
 
         self.twist_msg_.linear.x = 0.0
-        self.twist_msg_.angular.z = 1.57
+        self.twist_msg_.angular.z = 2.09
         self.publisher_.publish(self.twist_msg_)
-        time.sleep(1.0)
+        time.sleep(2.0)
 
         self.twist_msg_.linear.x = 2.0
         self.twist_msg_.angular.z = 0.0
@@ -39,15 +39,76 @@ class TurtleController(Node):
         time.sleep(2.0)
 
         self.twist_msg_.linear.x = 0.0
-        self.twist_msg_.angular.z = 1.57
+        self.twist_msg_.angular.z = 2.06
         self.publisher_.publish(self.twist_msg_)
-        time.sleep(1.0)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 4.0
+        self.twist_msg_.angular.z = 0.0
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 0.0
+        self.twist_msg_.angular.z = 2.09
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
 
         self.twist_msg_.linear.x = 2.0
         self.twist_msg_.angular.z = 0.0
         self.publisher_.publish(self.twist_msg_)
         time.sleep(2.0)
-        
+
+        self.twist_msg_.linear.x = 0.0
+        self.twist_msg_.angular.z = 2.09
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 2.0
+        self.twist_msg_.angular.z = 0.0
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 0.0
+        self.twist_msg_.angular.z = 3.14
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 2.0
+        self.twist_msg_.angular.z = 0.0
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 0.0
+        self.twist_msg_.angular.z = 2.04
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 2.0
+        self.twist_msg_.angular.z = 0.0
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 0.0
+        self.twist_msg_.angular.z = -2.09
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 2.0
+        self.twist_msg_.angular.z = 0.0
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 0.0
+        self.twist_msg_.angular.z = -2.09
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+        self.twist_msg_.linear.x = 2.0
+        self.twist_msg_.angular.z = 0.0
+        self.publisher_.publish(self.twist_msg_)
+        time.sleep(2.0)
+
+
         self.timer_.cancel()
 
 def main(args=None):
